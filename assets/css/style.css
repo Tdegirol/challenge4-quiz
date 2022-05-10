@@ -5,19 +5,28 @@
   }
 
 header{
-  margin:20px;
+  margin:15px;
 }
 
-.timer{
-  display:inline-block;
-  float: right;
+header a{
+  display: inline-flex;
+  position: relative;
+  float:left;
+  font-size: large;
+  text-decoration: none;
+}
+
+header span{
+  display:inline-flex;
+  position:relative;
+  float:right;
 }
 
 #intro{
   display:flex;
   flex-direction: column;
   text-align: center;
-  width: 400px;
+  padding:150px;
 }
 
 #quiz{
@@ -27,11 +36,26 @@ header{
   padding: 150px;
 }
 
+
+#start-btn{
+  display:inline-block;  
+  text-align: center;
+  height: 40px;
+  width: 150px;
+  margin-left: 200px;
+  background-color: navy;
+  color:white;
+  border-radius: 5px;
+  margin:5px;
+  font-size: large;
+}
+
 .answer-button{
   display: inline-block;
   text-align: left;
   height: 40px;
   width: 150px;
+  /* width:fit-content; */
   margin-left: 200px;
   background-color: navy;
   color:white;
