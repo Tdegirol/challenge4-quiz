@@ -22,20 +22,18 @@ header span{
   float:right;
 }
 
-#intro{
+#main, #quiz{
   display:flex;
   flex-direction: column;
   text-align: center;
+  position:absolute;
   padding:150px;
+  margin:100px;
 }
 
-#quiz{
-  display:flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 150px;
+#intro, #question{
+  padding:50px;
 }
-
 
 #start-btn{
   display:inline-block;  
