@@ -40,7 +40,7 @@ header span{
   text-align: center;
   height: 40px;
   width: 150px;
-  margin-left: 200px;
+  margin-left: 400px;
   background-color: navy;
   color:white;
   border-radius: 5px;
@@ -63,5 +63,9 @@ header span{
 }
 
 .answer-button:hover{
-  opacity: .7;
+  filter:brightness(80%)
+}
+
+.start-btn:hover{
+  filter:brightness(50%)
 }
