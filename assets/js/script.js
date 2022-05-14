@@ -19,8 +19,8 @@ var button4answers = ['console.log()', 'wrong3', 'Orange', 'Salad', '9'];
 quizEl.style.visibility='hidden';
 
 //timer to count down from 60s
-function countdown(i,timeLeft){
-    //var timeLeft = 60;
+function countdown(i){
+    var timeLeft = 60;
 
     var timeInterval = setInterval(function() {
         if (timeLeft > 0) {
@@ -36,28 +36,28 @@ function countdown(i,timeLeft){
         answer1Btn.onclick = function(){
             if (button1answers[i] == rightAnswersArr[i]){
                 i++;
-                nextQuestion(i);
+                nextQuestion(i, timeLeft, timeInterval);
             }else{
                 timeLeft -= 5;
             }}
         answer2Btn.onclick = function(){
             if (button2answers[i] == rightAnswersArr[i]){
                 i++;
-                nextQuestion(i);
+                nextQuestion(i, timeLeft, timeInterval);
             }else{
                 timeLeft -= 5;
             }}
         answer3Btn.onclick = function(){
             if (button3answers[i] == rightAnswersArr[i]){
                 i++;
-                nextQuestion(i);
+                nextQuestion(i, timeLeft, timeInterval);
             }else{
                 timeLeft -= 5;
             }}
         answer4Btn.onclick = function(){
             if (button4answers[i] == rightAnswersArr[i]){
                 i++;
-                nextQuestion(i);
+                nextQuestion(i, timeLeft, timeInterval);
             }else{
                 timeLeft -= 5;
             }}
@@ -77,15 +77,16 @@ startBtn.addEventListener('click',function(){
     answer4Btn.textContent = button4answers[0];
 })
 
-function nextQuestion(i,timeLeft,score){
+function nextQuestion(i,timeLeft,timeInterval){
     if (i==5){
-        //var score = timeLeft;
-        questionEl.textContent = 'Congratulations you completed the quiz! Your Score is: ' + timeLeft;
+        var score = timeLeft;
+        questionEl.textContent = 'Congratulations you completed the quiz! Your Score is: ' + score;
         answer1Btn.style.visibility='hidden';
         answer2Btn.style.visibility='hidden';
         answer3Btn.style.visibility='hidden';
         answer4Btn.style.visibility='hidden';
         introEl.textContent='';
+        timerEl.textContent = '';
         clearInterval(timeInterval);
         return(score);
     }else{
@@ -102,4 +103,5 @@ function nextQuestion(i,timeLeft,score){
 
 
 
+//create highscore "page" using local storage. create a different html page for high scores and link it. **OR dynamically show highscores by removing the content on main page and replacing it with new content
 
