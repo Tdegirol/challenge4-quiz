@@ -19,9 +19,9 @@ To view the website please follow the link below:
 
 The first portion of this challenge is creating the quiz which is utilizing event listeners to react to the users' selection. Upon clicking a wrong answer, time is deducted, and a right answer brings the next question up. The final score is recorded as the time remaining.
 
-![Media-Queries-Image](Assets/images/quiz.jpg)
+![Media-Queries-Image](assets/images/quiz.jpg)
 
-![Media-Queries-Image](Assets/images/score.jpg)
+![Media-Queries-Image](assets/images/score.jpg)
 
 In this case, I was able to get local storage working to record a user's entry, but could not get the score to be defined (even when passing it into my function). Unfortunately being out of time this is the best I can do for now and can hopefully clean this up in the future...
 
