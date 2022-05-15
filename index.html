@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-            <a href="#highscore">View High Scores</a>
+            <a href="#viewscore">View High Scores</a>
             <span><p id="timer">Time: 0</p></span>
     </header>
 
@@ -18,9 +18,7 @@
         <p id="intro">
             Test your knowledge! You have 60 seconds to answer five questions. Each question answered incorrectly subtracts 5 seconds from the timer. The time remaining after answering all questions is your final score. Click the button below to begin!
         </p>
-        <button id="start-btn">
-            Start Quiz!
-        </button>
+        <button id="start-btn">Start Quiz!</button>
     </section>
 
     <section id="quiz">
@@ -29,6 +27,18 @@
         <button class="answer-button" id="answer2"></button>
         <button class="answer-button" id="answer3"></button>
         <button class="answer-button" id="answer4"></button>
+    </section>
+
+    <section id="highscores">
+        <p id="input"></p>
+        <div>
+            <label for="initials">Enter your initials</label>
+            <input type="text" name="initials" id="initials" placeholder="Example: TJD" />
+            <button id="submit-btn">Submit</button>
+        </div>
+        <div id="viewscore">
+            <ol id="userlist"></ol>
+        </div>
     </section>
 
 <script src="./assets/js/script.js"></script>
